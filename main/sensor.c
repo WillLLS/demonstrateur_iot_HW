@@ -25,8 +25,6 @@ void sensor_task(){
     init_UART();
 
     int length  = 0;
-    char res_decode[2];
-
     char dataReceived[64];
 
     for(;;){
@@ -44,14 +42,6 @@ void sensor_task(){
              *  Read the RX buffer and add the value in the preinitiate buffer (dataReceived)
             */
             uart_read_bytes(UART_PORT_NUM, dataReceived, length,50);
-            
-            /*
-            for(uint8_t i = 0; i<length; i++){
-                printf("%02X ", (uint8_t) dataReceived[i]);
-            }
-            */
-
-            decode_frame(dataReceived, length, res_decode);
 
             sendData(dataReceived);
         }
