@@ -8,6 +8,7 @@ extern QueueHandle_t QueueHeart;
 extern QueueHandle_t QueueBreath;
 extern QueueHandle_t QueueHumanPSE;
 
+extern uint8_t flagStart;
 
 //QueueHandle_t xQueueMqtt;
 

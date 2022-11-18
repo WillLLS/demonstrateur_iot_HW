@@ -6,6 +6,7 @@
 
 #include "sensor.h"
 #include "log.h"
+#include "wifi.h"
 
 void init();
 
@@ -27,6 +28,12 @@ void app_main(void)
  * @brief Initiate the FreeRTOS Tasks and Queues 
 */
 void init(){
+    flagStart = 0;
+    init_smart_wifi();
+
+    while(!flagStart){
+        vTaskDelay(1);
+    }
 
     QueueHeart          = xQueueCreate(2, sizeof(char[2]));
     QueueBreath         = xQueueCreate(2, sizeof(char[2]));
