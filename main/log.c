@@ -54,9 +54,9 @@ void monitoring(){
         timeSinceStart(time);
         receivedValue();
 
-        printf("{ HV: %2d}, ", heartValue);
-        printf("{ BI: %2d, BV: %2d }, ", breath_info, breathValue);
-        printf("{ PI: %2d, MI: %2d, DYN: %3d, DIS: %3d, BO: (%3d, %3d) }\n",
+        printf("\"HV\": %2d, ", heartValue);
+        printf("\"BI\": %2d, \"BV\": %2d, ", breath_info, breathValue);
+        printf("\"PI\": %2d, \"MI\": %2d, \"DYN\": %3d, \"DIS\": %3d, \"BO\": (%3d, %3d) }\n",
                 pres_info, movement_info, body_dynamic, body_distance, body_orient[0], body_orient[1]);
         
         vTaskDelay(100);
@@ -89,7 +89,7 @@ void timeSinceStart(uint64_t µTime){
 
     flag_init = 1;
 
-    printf("{ %04d:%02d:%02d:%02d }, ", days, hours, min, sec);
+    printf("{ \"TSS\": \"%04d:%02d:%02d:%02d\", ", days, hours, min, sec);
 }
 
 
