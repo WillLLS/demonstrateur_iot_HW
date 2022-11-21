@@ -35,9 +35,7 @@ void sensor_task(){
         if(res == -1){
             printf("Error sending the trame.");
         }
-        else{
-            print(res);
-        }
+
 
 
         /**  
