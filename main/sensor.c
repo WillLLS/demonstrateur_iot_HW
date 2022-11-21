@@ -26,8 +26,19 @@ void sensor_task(){
 
     int length  = 0;
     char dataReceived[64];
+    char bufferToSend[10] = {0x53, 0x59, 0x01, 0x01, 0x00, 0x01, 0x0F, 0xBE, 0x54, 0x43};
 
     for(;;){
+
+
+        int res = uart_tx_chars(UART_PORT_NUM, bufferToSend, 10);
+        if(res == -1){
+            printf("Error sending the trame.");
+        }
+        else{
+            print(res);
+        }
+
 
         /**  
          * @brief Read the RX buffer and return the size of this one
