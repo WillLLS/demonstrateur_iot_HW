@@ -1,2 +1,6 @@
 alias start=". ./../esp-idf/export.sh"
+alias build="idf.py build"
+alias flash="idf.py -p /dev/ttyUSB0 flash"
 alias go="idf.py build && idf.py -p /dev/ttyUSB0 flash monitor"
+alias go2="idf.py build && idf.py -p /dev/ttyUSB0 flash && python3 visualisation.py"
+alias visu="python3 ./visualisation.py"
