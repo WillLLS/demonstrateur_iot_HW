@@ -56,7 +56,7 @@ void monitoring(){
 
         printf("\"HV\": %2d, ", heartValue);
         printf("\"BI\": %2d, \"BV\": %2d, ", breath_info, breathValue);
-        printf("\"PI\": %2d, \"MI\": %2d, \"DYN\": %3d, \"DIS\": %3d, \"BO\": (%3d, %3d) }\n",
+        printf("\"PI\": %2d, \"MI\": %2d, \"DYN\": %3d, \"DIS\": %3d, \"BO\": [%3d, %3d] }\n",
                 pres_info, movement_info, body_dynamic, body_distance, body_orient[0], body_orient[1]);
         
         vTaskDelay(100);
