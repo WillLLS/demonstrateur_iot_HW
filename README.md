@@ -18,7 +18,3 @@ Executer les commandes suivantes :
 > go  
 
 Note : Si le flashage ne fonctionne pas, appuyer sur le bouton reboot lors du téléversement
-  
-TODO:
-- Add Wifi Connection
-- Add MQTT protocole for sending data to the broker
